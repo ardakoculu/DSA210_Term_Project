@@ -7,7 +7,7 @@ Sabancı University DSA210 Fall 2025 Project
 
 ---
 
-## 📘 Project Overview
+## Project Overview
 This project investigates how **interest rate changes** — one of the most powerful monetary policy tools — influence various aspects of the financial system and the economy.  
 By combining historical data on **central bank interest rates**, **stock market indices**, and **bond yields**, the study aims to measure the extent and direction of relationships between these key indicators.  
 
@@ -16,7 +16,7 @@ Ultimately, the project will provide a data-driven overview of how financial mar
 
 ---
 
-## 🧭 Motivation
+## Motivation
 Interest rate policy is a central mechanism through which monetary authorities regulate inflation, stabilize currencies, and influence investment behavior.  
 Even small rate changes can ripple through the economy — affecting borrowing costs, investment strategies, bond prices, and stock valuations.  
 
@@ -24,7 +24,7 @@ This project explores these dynamics using real-world data, seeking to quantify 
 
 ---
 
-## 📊 Data Sources
+## Data Sources
 This study will use **publicly available datasets** from credible sources:
 
 1. **Interest Rate Data:**  
@@ -46,7 +46,7 @@ This study will use **publicly available datasets** from credible sources:
 
 ---
 
-## 🧩 Data Collection Plan
+## Data Collection Plan
 - Use **Python** with libraries such as `pandas`, `yfinance`, and `requests` to pull and clean data.  
 - Align datasets on a **monthly or quarterly** time scale for comparability.  
 - Handle missing or irregular data using interpolation and normalization methods.  
@@ -72,7 +72,7 @@ This study will use **publicly available datasets** from credible sources:
 
 ---
 
-## 💡 Expected Findings
+## Expected Findings
 - Negative correlation between interest rate increases and stock market performance.  
 - Positive correlation between interest rates and bond yields.  
 - Sector-specific differences — financial sectors may show delayed or opposite responses.  
