@@ -24,15 +24,12 @@ All data will be sourced from **institutional and publicly available** databases
 ---
 
 ## 3. Data Collection Plan
-1. **Download data** directly from the official portals (FRED, OECD, World Bank, IMF) as CSV or Excel files.  
-2. **Unify frequencies** by converting all datasets to a common time format (monthly or quarterly) and aligning by date.  
-3. **Clean and preprocess** the data by:  
-   - Handling missing values with interpolation or forward fill.  
-   - Selecting only relevant columns (policy rate, bond yields, credit indicators).  
-4. **Merge** datasets using their time index to build one integrated financial dataset.  
-5. **Store** the cleaned and merged files in a `/data` folder for analysis in later stages.
+I’ll collect the datasets directly from each institution’s website (FRED, OECD, World Bank, and IMF) and download them in CSV or Excel format.  
+After that, I’ll organize everything under a common timeline, probably monthly or quarterly, so the data lines up properly.  
+If there are any missing values, I’ll fill them in or adjust them depending on the trend.  
+Then I’ll pick the variables that matter most for my analysis — mainly the policy rate, bond yields, and financial or credit indicators — and bring them all together into one dataset.  
+Once it’s ready, I’ll save the cleaned version in a simple `/data` folder that I can use later for analysis and visualization.
 
 ---
 
 **End of Proposal**
-
