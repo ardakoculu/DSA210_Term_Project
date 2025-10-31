@@ -1,6 +1,6 @@
 # DSA210_Term_Project
 Sabancı University DSA210 Fall 2025 Project
-# Project Proposal: The Impact of U.S. Federal Reserve Policy Rate Changes on Financial Markets
+The Impact of U.S. Federal Reserve Policy Rate Changes on Financial Markets
 
 ## 1. Project Proposal
 This project aims to analyze how **changes in the U.S. Federal Reserve’s policy rate (Federal Funds Rate)** influence major **financial market indicators** such as bond yields, stock market indices, and credit-related variables.  
@@ -31,5 +31,3 @@ Then I’ll pick the variables that matter most for my analysis — mainly the p
 Once it’s ready, I’ll save the cleaned version in a simple `/data` folder that I can use later for analysis and visualization.
 
 ---
-
-**End of Proposal**
