@@ -1,16 +1,26 @@
 # DSA210_Term_Project
 Sabancı University DSA210 Fall 2025 Project
 # The Impact of Interest Rate Changes on Financial Markets and Economic Indicators
+**Fall 2025 – Project Proposal**  
 **Author:** Arda Koçulu  
-**Instructor:** [Your Instructor’s Name]  
 **Date:** 31 October 2025  
 
 ---
 
+## 📘 Project Overview
+This project investigates how **interest rate changes** — one of the most powerful monetary policy tools — influence various aspects of the financial system and the economy.  
+By combining historical data on **central bank interest rates**, **stock market indices**, and **bond yields**, the study aims to measure the extent and direction of relationships between these key indicators.  
+
+The overall goal is to identify how different sectors and markets respond to tightening or easing monetary conditions.  
+Ultimately, the project will provide a data-driven overview of how financial markets adapt to changes in interest rate policies.
+
+---
+
 ## 🧭 Motivation
-Interest rate policy is one of the key tools governments and central banks use to control inflation, stabilize markets, and influence overall economic activity.  
-This project aims to explore how **changes in central bank interest rates** affect a variety of **financial and economic indicators** such as stock market indices, bond yields, and sector performance.  
-Understanding these relationships helps reveal how monetary policy decisions ripple through the real economy and financial systems.
+Interest rate policy is a central mechanism through which monetary authorities regulate inflation, stabilize currencies, and influence investment behavior.  
+Even small rate changes can ripple through the economy — affecting borrowing costs, investment strategies, bond prices, and stock valuations.  
+
+This project explores these dynamics using real-world data, seeking to quantify how rate changes shape financial and economic trends.
 
 ---
 
@@ -70,3 +80,4 @@ This study will use **publicly available datasets** from credible sources:
 ---
 
 ## ⚙️ Tools and Libraries
+
