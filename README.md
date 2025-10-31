@@ -1,9 +1,6 @@
 # DSA210_Term_Project
 Sabancı University DSA210 Fall 2025 Project
 # The Impact of Interest Rate Changes on Financial Markets and Economic Indicators
-**Fall 2025 – Project Proposal**  
-**Author:** Arda Koçulu  
-**Date:** 31 October 2025  
 
 ---
 
