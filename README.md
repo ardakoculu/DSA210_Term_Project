@@ -20,7 +20,6 @@ All data will be sourced from **institutional and publicly available** databases
 | **World Bank Global Financial Development Database** | Market capitalization, private sector credit, financial depth ratios | Annual |
 | **IMF International Financial Statistics (optional)** | U.S. government bond yields and short-term rates | Monthly |
 
-🟣 *Note:* The project will focus only on **financial indicators** — no GDP or inflation variables will be included.
 
 ---
 
