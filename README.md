@@ -1,7 +1,7 @@
 # DSA210_Term_Project
 # The Impact of U.S. Federal Reserve Policy Rate Changes on Financial Markets
 
-## 1. Project Proposal
+## Project Proposal
 This project aims to analyze how **changes in the U.S. Federal Reserve’s policy rate (Federal Funds Rate)** influence major **financial market indicators** such as bond yields, stock market indices, and credit-related variables.  
 
 The purpose is to identify whether monetary tightening (rate hikes) and easing (rate cuts) produce measurable patterns in financial markets.  
@@ -18,7 +18,7 @@ The idea is to connect what we hear in the news (“Fed raised rates by 25 bps�
 
 ---
 
-## 3. Research Questions
+## Research Questions
 I plan to focus on a few main questions:
 1. How much do changes in the Federal Funds Rate pass through to U.S. Treasury yields across different maturities (short-term and long-term)?
 2. Do higher Fed policy rates lead to increases in borrowing costs, such as mortgage rates or corporate bond yields?
@@ -31,7 +31,7 @@ From these questions, one simple statistical hypothesis pair I can test is:
 
 ---
 
-## 4. Data to Be Used
+## Data to Be Used
 All data will come from public, institutional sources:
 
 | Source | Description | Frequency |
@@ -43,7 +43,7 @@ All data will come from public, institutional sources:
 
 ---
 
-## 5. Data Collection Plan
+## Data Collection Plan
 I’ll collect the datasets directly from each institution’s website (FRED, OECD, World Bank, and IMF) and download them in CSV or Excel format.  
 Then I’ll put everything on a common timeline (most likely monthly or quarterly) so the dates match across sources.  
 If there are missing values, I’ll deal with them by filling them in or carrying the previous value forward, depending on what makes sense for that variable.  
@@ -52,7 +52,7 @@ Finally, I’ll save the cleaned version in a `/data` folder to use for analysis
 
 ---
 
-## 6. Methodology (How I Plan to Analyze the Data)
+## Methodology (How I Plan to Analyze the Data)
 At a high level, I plan to follow the data science workflow we saw in class:
 
 1. **Exploratory Data Analysis (EDA)**  
@@ -74,7 +74,7 @@ At a high level, I plan to follow the data science workflow we saw in class:
 
 ---
 
-## 7. Expected Outcomes
+## Expected Outcomes
 At this stage I expect:
 
 - to see a **positive relationship** between the Federal Funds Rate and government bond yields,  
