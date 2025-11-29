@@ -9,7 +9,7 @@ By applying data science techniques, including exploratory data analysis and cor
 
 ---
 
-## 2. Motivation
+## Motivation
 The Federal Funds Rate is one of the most influential policy tools in the world.  
 When the rate changes, financial markets react. Bond yields shift, stock indices adjust, and credit conditions tighten or loosen.
 As a finance enthusiast, I’m driven to understand how these shifts actually appear in real economic data.
