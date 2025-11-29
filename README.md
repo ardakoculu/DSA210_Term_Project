@@ -1,5 +1,4 @@
 # DSA210_Term_Project
-# DSA210_Term_Project
 # The Impact of U.S. Federal Reserve Policy Rates on Borrowing Costs
 
 ## Project Proposal
