@@ -1,87 +1,128 @@
-# DSA210_Term_Project
-# The Impact of U.S. Federal Reserve Policy Rate Changes on Financial Markets
-
-## Project Proposal
-This project aims to analyze how **changes in the U.S. Federal Reserve’s policy rate (Federal Funds Rate)** influence major **financial market indicators** such as bond yields, stock market indices, and credit-related variables.  
-
-The purpose is to identify whether monetary tightening (rate hikes) and easing (rate cuts) produce measurable patterns in financial markets.  
-By applying data science techniques, including exploratory data analysis and correlation testing, the project will determine the strength and direction of relationships between policy rates and financial variables over time.
+# DSA210 Term Project  
+## Do the Number of Bedrooms and Bathrooms Affect House Prices?
 
 ---
 
-## Motivation
-The Federal Funds Rate is one of the most influential policy tools in the world.  
-When the rate changes, financial markets react. Bond yields shift, stock indices adjust, and credit conditions tighten or loosen.
-As a finance enthusiast, I’m driven to understand how these shifts actually appear in real economic data.
-This project aims to understand these relationships using real financial and economic data.  
-The idea is to connect what we hear in the news (“Fed raised rates by 25 bps…”) with real numbers from official sources and try to understand the link between policy decisions and market reactions using the tools I learn in DSA210.
+## 1. Project Proposal
+
+This project explores whether the number of bedrooms and bathrooms in a house has a measurable effect on its market price.  
+Housing markets are influenced by many factors, but one of the most common and intuitive questions is whether having more rooms actually increases the value of a home — and by how much.
+
+Using real housing datasets, I will analyze the relationship between house features (bedrooms, bathrooms, living area size) and sale prices to determine whether these features significantly influence market value.  
+The project will use the tools learned in DSA210 to perform exploratory data analysis (EDA), correlation analysis, and simple regression modeling.
 
 ---
 
-## Research Questions
-I plan to focus on a few main questions:
-1. How much do changes in the Federal Funds Rate pass through to U.S. Treasury yields across different maturities (short-term and long-term)?
-2. Do higher Fed policy rates lead to increases in borrowing costs, such as mortgage rates or corporate bond yields?
-3. Do changes in the Federal Funds Rate have a measurable effect on stock-market performance across major U.S. indices, such as the S&P 500, NASDAQ, and Russell 2000?
+## 2. Motivation
 
-From these questions, one simple statistical hypothesis pair I can test is:
+Housing is one of the largest financial markets in the world, and house-pricing models are widely used by banks, real-estate companies, and homeowners.  
+Understanding how different home attributes affect price helps us see which housing features matter most.
 
-- **H₀ (null):** Changes in the Federal Funds Rate are not associated with changes in the financial indicators (no meaningful relationship; correlation ≈ 0).  
-- **H₁ (alternative):** Changes in the Federal Funds Rate are associated with changes in the financial indicators (there **is** a meaningful relationship).
+This project will allow me to:
 
----
+- explore a rich real-world dataset,
+- run meaningful statistical tests,
+- apply EDA and visualization techniques from class,
+- and build an interpretable model.
 
-## Data to Be Used
-All data will come from public, institutional sources:
-
-| Source | Description | Frequency |
-|--------|-------------|-----------|
-| **Federal Reserve Economic Data (FRED)** | Effective Federal Funds Rate, U.S. Treasury yields, mortgage rates, corporate bond yields, stock indices (S&P 500, NASDAQ 100, Russell 2000) | Monthly |
-| **OECD Data Portal** | U.S. financial and credit market indicators | Quarterly |
-| **World Bank – Global Financial Development Database** | Market capitalization, domestic credit to private sector, financial depth ratios | Annual |
-| **IMF – International Financial Statistic** | U.S. government bond yields and short-term interest rates | Monthly |
+It is also a topic that is simple enough to complete but rich enough to generate interesting insights.
 
 ---
 
-## Data Collection Plan
-I’ll collect the datasets directly from each institution’s website (FRED, OECD, World Bank, and IMF) and download them in CSV or Excel format.  
-Then I’ll put everything on a common timeline (most likely monthly or quarterly) so the dates match across sources.  
-If there are missing values, I’ll deal with them by filling them in or carrying the previous value forward, depending on what makes sense for that variable.  
-After that, I’ll select the variables that are most relevant for the project, mainly the policy rate, bond yields, and financial/credit indicators (plus a few macro variables if needed) and merge them into a single dataset.  
-Finally, I’ll save the cleaned version in a `/data` folder to use for analysis and visualizations later.
+## 3. Research Question
+
+### Does the number of bedrooms and bathrooms have a statistically significant effect on house prices?
+
+From this, I will test the following hypotheses:
+
+**Null Hypothesis (H₀):**  
+The number of bedrooms/bathrooms has no meaningful relationship with house price (correlation ≈ 0).
+
+**Alternative Hypothesis (H₁):**  
+The number of bedrooms/bathrooms does have a meaningful relationship with house price (correlation ≠ 0).
 
 ---
 
-## Methodology (How I Plan to Analyze the Data)
-At a high level, I plan to follow the data science workflow we saw in class:
+## 4. Data to Be Used
 
-1. **Exploratory Data Analysis (EDA)**  
-   - Plot the Fed Funds Rate over time.  
-   - Plot bond yields and financial indicators over time.  
-   - Put them on the same timeline to get a visual feeling for whether they move together.
+I will use publicly available housing datasets, such as:
 
-2. **Correlation and Simple Statistical Tests**  
-   - Calculate correlations between the policy rate and each financial indicator.  
-   - Check whether these correlations are statistically different from zero (this connects to the H₀ / H₁ above).  
+| Source | Description |
+|--------|-------------|
+| **Kaggle – Housing Data (Ames Housing / King County House Prices)** | Contains house price, bedrooms, bathrooms, living area, lot area, etc. |
+| **UCI Machine Learning Repository** | Real estate attributes and sale prices |
+| **Open MLS / public county records** | Additional datasets if needed |
 
-3. **Basic Modeling**  
-   - Try a simple regression model where a financial variable (for example, a bond yield) is the target and the Fed rate and maybe some other indicators are the inputs.  
-   - Evaluate how well the model explains the variation in that variable.
+These datasets include the exact variables needed:
 
-4. **Visualization and Interpretation**  
-   - Use clear plots (line charts, scatter plots, heatmaps) to summarize what I find.  
-   - Try to connect the visuals to real episodes of tightening and easing (for example, recent years when the Fed raised rates quickly).
+- price  
+- bedrooms  
+- bathrooms  
+- sqft_living (optional)  
+- sqft_lot (optional)
+
+Most are already formatted as CSV files, making them easy to load and clean.
+
+---
+
+## 5. Data Collection Plan
+
+1. Download the dataset directly from Kaggle or UCI as a CSV file.  
+2. Load the dataset into a Pandas DataFrame.  
+3. Clean the data by:
+   - removing missing or invalid values,
+   - correcting types (e.g., converting price to numeric),
+   - filtering unrealistic data (e.g., 0 bedrooms but high price).  
+4. Select the variables relevant to the research question:
+   - price  
+   - bedrooms  
+   - bathrooms  
+5. Save the cleaned dataset in a `/data` folder for EDA and modeling.
 
 ---
 
-## Expected Outcomes
-At this stage I expect:
+## 6. Methodology
 
-- to see a **positive relationship** between the Federal Funds Rate and government bond yields,  
-- some **negative relationship** between higher rates and stock/financial indicators (markets slowing in tightening periods),  
-- and possibly a delay between the policy move and the market reaction.
+I will follow the data science workflow introduced in class:
 
-It is also possible that some indicators do **not** react strongly, or that the relationship is weaker than I expect. In that case, the result is still useful, because it shows that other factors (like global events, expectations, or risk sentiment) might be more important than the raw policy rate itself.
+### Step 1 — Exploratory Data Analysis (EDA)
+
+- Summary statistics (mean, median, ranges)
+- Distribution of prices, bedrooms, bathrooms
+- Scatter plots (price vs bedrooms, price vs bathrooms)
+- Correlation heatmap
+- Boxplots to compare price differences across bedroom counts
+
+### Step 2 — Statistical Testing
+
+- Test whether the relationship between bedrooms/bathrooms and price is statistically significant
+- Perform correlation tests
+- Connect the results to the H₀ / H₁ hypotheses
+
+### Step 3 — Simple Regression Modeling
+
+- Build a linear regression model predicting **price** from:
+  - bedrooms
+  - bathrooms
+  - (optional) sqft_living  
+- Interpret coefficients to see how much each feature affects price
+
+### Step 4 — Visualization
+
+- Clean line plots, scatter plots, and heatmaps
+- Interpret the visual patterns
+- Make conclusions based on visual + statistical evidence
 
 ---
+
+## 7. Expected Outcomes
+
+I expect to find that:
+
+- Houses with more bathrooms tend to have significantly higher prices  
+- Bedrooms may have a weaker relationship than bathrooms  
+- Square footage may be a major confounder (optional to include)  
+- Regression will likely show a positive coefficient for both predictors  
+
+It is also possible that the effect of bedrooms alone is small or nonlinear, which is valuable insight for the project.
 
