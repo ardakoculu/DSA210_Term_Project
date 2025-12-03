@@ -6,7 +6,7 @@
 ## 1. Project Proposal
 
 This project explores whether the number of bedrooms and bathrooms in a house has a measurable effect on its market price.  
-Housing markets are influenced by many factors, but one of the most common and intuitive questions is whether having more rooms actually increases the value of a home — and by how much.
+Housing markets are influenced by many factors, but one of the most common and intuitive questions is whether having more rooms actually increases the value of a home, and by how much.
 
 Using real housing datasets, I will analyze the relationship between house features (bedrooms, bathrooms, living area size) and sale prices to determine whether these features significantly influence market value.  
 The project will use the tools learned in DSA210 to perform exploratory data analysis (EDA), correlation analysis, and simple regression modeling.
