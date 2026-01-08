@@ -1,5 +1,5 @@
 # DSA210 Term Project  
-## House Price Predictioin
+## House Price Prediction
 ## Do the Number of Bedrooms and Bathrooms Affect House Prices?
 
 ---
