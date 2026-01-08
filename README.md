@@ -16,23 +16,13 @@ The project will use the tools learned in DSA210 to perform exploratory data ana
 
 ## 2. Motivation
 
-Housing is one of the largest financial markets in the world, and house-pricing models are widely used by banks, real-estate companies, and homeowners.  
-Understanding how different home attributes affect price helps us see which housing features matter most.
-
-This project will allow me to:
-
-- explore a rich real-world dataset,
-- run meaningful statistical tests,
-- apply EDA and visualization techniques from class,
-- and build an interpretable model.
-
-It is also a topic that is simple enough to complete but rich enough to generate interesting insights.
+The real estate market is a critical component of the economy, and understanding the factors that influence house prices is of great interest to buyers, sellers, and real estate professionals. This project aims to analyze the relationship between a house's physical attributes and its market value. By analyzing a comprehensive dataset of residential properties, we can build a predictive model that not only estimates sale prices but also provides insight into which features are most impactful. The primary motivation is to answer a common question for homeowners and potential buyers: which home feature or features provide the most value?
 
 ---
 
 ## 3. Research Question
 
-### Does the number of bedrooms and bathrooms have a statistically significant effect on house prices?
+### Do the number of bedrooms and bathrooms have a statistically significant effect on house prices?
 
 From this, I will test the following hypotheses:
 
@@ -42,33 +32,24 @@ The number of bedrooms/bathrooms has no meaningful relationship with house price
 **Alternative Hypothesis (H₁):**  
 The number of bedrooms/bathrooms does have a meaningful relationship with house price (correlation ≠ 0).
 
+This question will be explored through exploratory data analysis, and the development of a machine learning model to quantify the relationships.
+
 ---
 
-## 4. Data to Be Used
 
-I will use publicly available housing datasets, such as:
+## 4. Data Source
 
-| Source | Description |
-|--------|-------------|
-| **Kaggle – Housing Data (Ames Housing / King County House Prices)** | Contains house price, bedrooms, bathrooms, living area, lot area, etc. |
-| **UCI Machine Learning Repository** | Real estate attributes and sale prices |
-| **Open MLS / public county records** | Additional datasets if needed |
+The dataset used for this project is the **Ames Housing dataset**, which describes the sale of individual residential property in Ames, Iowa from 2006 to 2010. It is a well-known dataset in the data science community and is often used for regression tasks.
 
-These datasets include the exact variables needed:
-
-- price  
-- bedrooms  
-- bathrooms  
-- sqft_living (optional)  
-- sqft_lot (optional)
-
-Most are already formatted as CSV files, making them easy to load and clean.
+-   **Source:** [Kaggle - House Prices: Advanced Regression Techniques](https://www.kaggle.com/c/house-prices-advanced-regression-techniques)
+-   **Local Path:** `data/housing.csv`
+-   **Content:** 1,460 observations and 81 features, including 23 nominal, 23 ordinal, 14 discrete, and 20 continuous variables.
 
 ---
 
 ## 5. Data Collection Plan
 
-1. Download the dataset directly from Kaggle or UCI as a CSV file.  
+1. Download the dataset directly from Kaggle as a CSV file.  
 2. Load the dataset into a Pandas DataFrame.  
 3. Clean the data by:
    - removing missing or invalid values,
@@ -84,37 +65,13 @@ Most are already formatted as CSV files, making them easy to load and clean.
 
 ## 6. Methodology
 
-I will follow the data science workflow introduced in class:
+The project will follow the standard data science pipeline:
 
-### Step 1 — Exploratory Data Analysis (EDA)
+1.  **Data Cleaning and Preparation:** The raw dataset will be loaded, inspected for missing values and outliers, and cleaned. New features, such as `TotalBath`, will be engineered to better capture the data's underlying patterns.
+2.  **Exploratory Data Analysis (EDA):** I will use descriptive statistics and visualizations (scatter plots, histograms, heatmaps) to explore the relationships between variables, particularly how `BedroomAbvGr` and the newly created `TotalBath` correlate with `SalePrice`.
+3.  **Hypothesis Testing:** A formal statistical test (such as a t-test or ANOVA) will be conducted to determine if the observed differences in house prices across different numbers of bedrooms and bathrooms are statistically significant.
+4.  **Machine Learning Modeling:** A multiple linear regression model will be trained to predict `SalePrice` based on the number of bedrooms, bathrooms, and other relevant features. The model's performance will be evaluated using metrics like R-squared and Mean Squared Error.
 
-- Summary statistics (mean, median, ranges)
-- Distribution of prices, bedrooms, bathrooms
-- Scatter plots (price vs bedrooms, price vs bathrooms)
-- Correlation heatmap
-- Boxplots to compare price differences across bedroom counts
-
-### Step 2 — Statistical Testing
-
-- Test whether the relationship between bedrooms/bathrooms and price is statistically significant
-- Perform correlation tests
-- Connect the results to the H₀ / H₁ hypotheses
-
-### Step 3 — Simple Regression Modeling
-
-- Build a linear regression model predicting **price** from:
-  - bedrooms
-  - bathrooms
-  - (optional) sqft_living  
-- Interpret coefficients to see how much each feature affects price
-
-### Step 4 — Visualization
-
-- Clean line plots, scatter plots, and heatmaps
-- Interpret the visual patterns
-- Make conclusions based on visual + statistical evidence
-
----
 
 ## 7. Expected Outcomes
 
