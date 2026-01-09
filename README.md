@@ -42,7 +42,7 @@ This question will be explored through exploratory data analysis, correlation an
 
 This project uses two datasets: a micro-level dataset of house sales in King County, Washington, and a macro-level dataset containing a regional housing price index to capture market trends over time.
 
-# 4.1 Primary Dataset: King County House Sales (Washington)
+### 4.1 Primary Dataset: King County House Sales (Washington)
 
 This dataset contains individual residential house sale records in King County (Seattle metropolitan area), along with detailed property characteristics.
 
@@ -52,7 +52,7 @@ This dataset contains individual residential house sale records in King County (
   
 Time Period : May 2014 – May 2015
 
-# 4.2 Supplementary Dataset: Regional Housing Price Index
+### 4.2 Supplementary Dataset: Regional Housing Price Index
 
 This dataset provides macro-level housing market trends using regional house price indices, including a Seattle (WA) regional index, which reflects overall market movements over time.
 
