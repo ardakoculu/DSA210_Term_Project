@@ -6,11 +6,12 @@
 
 ## 1. Project Proposal
 
-This project explores whether the number of bedrooms and bathrooms in a house has a measurable effect on its market price.  
-Housing markets are influenced by many factors, but one of the most common and intuitive questions is whether having more rooms actually increases the value of a home, and by how much.
+This project explores how various characteristics of a house influence its market price.
+House prices are affected by many factors, and this study aims to understand how a combination of structural features and market conditions contributes to housing value.
 
-Using real housing datasets, I will analyze the relationship between house features (bedrooms, bathrooms, living area size) and sale prices to determine whether these features significantly influence market value.  
-The project will use the tools learned in DSA210 to perform exploratory data analysis (EDA), correlation analysis, and simple regression modeling.
+Using real housing datasets, I analyze the relationship between multiple house features (such as bedrooms, bathrooms, living area size, condition, grade, and location-related attributes) and sale prices to determine which factors significantly influence market value. In addition, a regional housing price index is incorporated to account for broader housing market trends over time that may affect individual house prices.
+
+The project uses the tools learned in DSA210 to perform exploratory data analysis (EDA), correlation analysis, hypothesis testing, and regression-based modeling for house price prediction.
 
 ---
 
@@ -22,44 +23,77 @@ The real estate market is a critical component of the economy, and understanding
 
 ## 3. Research Question
 
-### Do the number of bedrooms and bathrooms have a statistically significant effect on house prices?
+### Do house-specific characteristics and regional housing market trends have a statistically significant effect on house prices in King County, Washington?
 
 From this, I will test the following hypotheses:
 
 **Null Hypothesis (H₀):**  
-The number of bedrooms/bathrooms has no meaningful relationship with house price (correlation ≈ 0).
+House-specific features and regional housing market trends have no meaningful relationship with house prices in King County, Washington (correlation ≈ 0).
 
 **Alternative Hypothesis (H₁):**  
-The number of bedrooms/bathrooms does have a meaningful relationship with house price (correlation ≠ 0).
+House-specific features and regional housing market trends have a meaningful relationship with house prices in King County, Washington (correlation ≠ 0).
 
-This question will be explored through exploratory data analysis, and the development of a machine learning model to quantify the relationships.
+This question will be explored through exploratory data analysis, correlation analysis, hypothesis testing, and the development of regression-based and machine learning models to quantify these relationships.
 
 ---
 
 
 ## 4. Data Source
 
-The dataset used for this project is the **Ames Housing dataset**, which describes the sale of individual residential property in Ames, Iowa from 2006 to 2010. It is a well-known dataset in the data science community and is often used for regression tasks.
+This project uses two datasets: a micro-level dataset of house sales in King County, Washington, and a macro-level dataset containing a regional housing price index to capture market trends over time.
 
--   **Source:** [Kaggle - House Prices: Advanced Regression Techniques](https://www.kaggle.com/c/house-prices-advanced-regression-techniques)
--   **Local Path:** `data/housing.csv`
--   **Content:** 1,460 observations and 81 features, including 23 nominal, 23 ordinal, 14 discrete, and 20 continuous variables.
+### 4.1 Primary Dataset: King County House Sales (Washington)
+
+This dataset contains individual residential house sale records in King County (Seattle metropolitan area), along with detailed property characteristics.
+
+-   **Source:** [Kaggle - House Sales in King County, USA](https://www.kaggle.com/datasets/arathipraj/house-data)
+-   **Local Path:** `data/house_data.csv`
+-   **Content:** 21,613 observations and 21 features, including sale price, number of bedrooms and bathrooms, living area size, lot size, condition, grade, and location-related variables.
+  
+Time Period : May 2014 – May 2015
+
+### 4.2 Supplementary Dataset: Regional Housing Price Index
+
+This dataset provides macro-level housing market trends using regional house price indices, including a Seattle (WA) regional index, which reflects overall market movements over time.
+
+-   **Source:** [Kaggle – U.S. Housing Prices: Regional Trends (2000–2023)](https://www.kaggle.com/datasets/praveenchandran2006/u-s-housing-prices-regional-trends-2000-2023)
+-   **Local Path:** `data/regional_house_index.csv`
+-   **Content:** Time-series housing price indices for multiple U.S. regions, including Seattle, Washington.
+
+Time Period: January 2000 – December 2023
+
+---
+
+## 3. Methodology
+
+This project follows a standard data science workflow for predictive modeling:
+
+1.  **Data Loading and Exploration:** Load the King County house sales dataset and examine its structure, distributions, and relationships.
+2.  **Data Cleaning and Preprocessing:** Handle missing values, correct data types, and identify outliers.
+3.  **Feature Engineering:** Create new features and transform existing ones to improve model performance.
+4.  **Exploratory Data Analysis (EDA):** Visualize distributions and correlations to understand the data better.
+5.  **Hypothesis Testing:** Conduct statistical tests to validate assumptions about key features.
+6.  **Model Development:** Build and train multiple machine learning models (Linear Regression, Random Forest, Gradient Boosting).
+7.  **Model Evaluation:** Evaluate models using appropriate metrics (R², RMSE, MAE) and select the best performer.
+8.  **Feature Importance Analysis:** Identify which features contribute most to predictions.
+9.  **Macro-Economic Integration:** Incorporate regional housing market index data to enhance model context and interpretability.
 
 ---
 
 ## 5. Data Collection Plan
 
-1. Download the dataset directly from Kaggle as a CSV file.  
+1. Download both datasets directly from Kaggle as CSV files. 
 2. Load the dataset into a Pandas DataFrame.  
-3. Clean the data by:
-   - removing missing or invalid values,
-   - correcting types (e.g., converting price to numeric),
-   - filtering unrealistic data (e.g., 0 bedrooms but high price).  
-4. Select the variables relevant to the research question:
-   - price  
-   - bedrooms  
-   - bathrooms  
-5. Save the cleaned dataset in a `/data` folder for EDA and modeling.
+3. Clean and preprocess the data by:
+   - handling missing or invalid values,
+   - correcting types (e.g., parsing dates, converting price to numeric),
+   - filtering unrealistic datao r extreme outliers when necessary. (e.g., 0 bedrooms but high
+   price).
+4. Prepare the analysis dataset by:
+   - selecting relevant house-level features and defining price as the target variable, 
+   - aligning house sale dates with the Seattle regional housing price index, 
+   - merging the regional index into the house-level dataset to account for market trends.
+5. Save the cleaned and processed dataset in a `/data` folder for EDA, hypothesis testing and modeling.
 
 ---
 
@@ -77,10 +111,4 @@ The project will follow the standard data science pipeline:
 
 I expect to find that:
 
-- Houses with more bathrooms tend to have significantly higher prices  
-- Bedrooms may have a weaker relationship than bathrooms  
-- Square footage may be a major confounder (optional to include)  
-- Regression will likely show a positive coefficient for both predictors  
-
-It is also possible that the effect of bedrooms alone is small or nonlinear, which is valuable insight for the project.
 
