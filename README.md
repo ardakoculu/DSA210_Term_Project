@@ -1,5 +1,5 @@
 # DSA210 Term Project  
-## House Price Prediction
+# House Price Prediction
 
 ---
 
