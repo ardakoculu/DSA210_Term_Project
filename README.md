@@ -51,15 +51,18 @@ This dataset contains individual residential house sale records in King County (
   
 Time Period : May 2014 – May 2015
 
-### 4.2 Supplementary Dataset: Regional Housing Price Index
+### 4.2 Supplementary Dataset: Seattle Housing Price Index (SEXRSA)
 
-This dataset provides macro-level housing market trends using regional house price indices, including a Seattle (WA) regional index, which reflects overall market movements over time.
+**Source:** [Federal Reserve Economic Data (FRED) - SEXRSA](https://fred.stlouisfed.org/series/SEXRSA )
 
--   **Source:** [Kaggle – U.S. Housing Prices: Regional Trends (2000–2023)](https://www.kaggle.com/datasets/praveenchandran2006/u-s-housing-prices-regional-trends-2000-2023)
--   **Local Path:** `data/regional_house_index.csv`
--   **Content:** Time-series housing price indices for multiple U.S. regions, including Seattle, Washington.
+- **Official Provider:** S&P Dow Jones Indices LLC
+- **Index Name:** S&P/Case-Shiller WA-Seattle Home Price Index
+- **Data Type:** Seasonally Adjusted (SA) Monthly Index
+- **Base Period:** January 2000 = 100
+- **Time Coverage:** January 1990 to Present
+- **Frequency:** Monthly observations
+- **Purpose:** Measures average change in residential real estate values in Seattle metropolitan area
 
-Time Period: January 2000 – December 2023
 
 ---
 
