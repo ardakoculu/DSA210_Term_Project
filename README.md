@@ -82,7 +82,7 @@ This project follows a standard data science workflow for predictive modeling:
 
 ---
 
-## 5. Data Collection Plan
+## 4. Data Collection Plan
 
 1. Download both datasets directly from Kaggle as CSV files. 
 2. Load the dataset into a Pandas DataFrame.  
@@ -96,17 +96,6 @@ This project follows a standard data science workflow for predictive modeling:
    - aligning house sale dates with the Seattle regional housing price index, 
    - merging the regional index into the house-level dataset to account for market trends.
 5. Save the cleaned and processed dataset in a `/data` folder for EDA, hypothesis testing and modeling.
-
----
-
-## 6. Methodology
-
-The project will follow the standard data science pipeline:
-
-1.  **Data Cleaning and Preparation:** The raw dataset will be loaded, inspected for missing values and outliers, and cleaned. New features, such as `TotalBath`, will be engineered to better capture the data's underlying patterns.
-2.  **Exploratory Data Analysis (EDA):** I will use descriptive statistics and visualizations (scatter plots, histograms, heatmaps) to explore the relationships between variables, particularly how `BedroomAbvGr` and the newly created `TotalBath` correlate with `SalePrice`.
-3.  **Hypothesis Testing:** A formal statistical test (such as a t-test or ANOVA) will be conducted to determine if the observed differences in house prices across different numbers of bedrooms and bathrooms are statistically significant.
-4.  **Machine Learning Modeling:** A multiple linear regression model will be trained to predict `SalePrice` based on the number of bedrooms, bathrooms, and other relevant features. The model's performance will be evaluated using metrics like R-squared and Mean Squared Error.
 
 ---
 
